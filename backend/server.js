@@ -1,19 +1,17 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.port || 3000
 var cors = require('cors')
 const { MongoClient } = require('mongodb');
 const bodyparser = require('body-parser');
+require('dotenv').config()
 
 // Connection URL
-const url = 'mongodb+srv://lifeplzlogin:2GbMjMzBPy7ZqJfI@cluster0.fotcofw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const url=process.env.MONGO_URI;
 const client = new MongoClient(url);
 const dbName = 'passop';
 
 
-
-require('dotenv').config()
-console.log(process.env.MONGO_URI)
 app.use(bodyparser.json());
 app.use(cors())
 

@@ -9,7 +9,7 @@ const Navbar = () => {
                 <div className="logo font-bold text-2xl flex justify-center items-center">
                     {/* <span><img className="h-12" src="public\icons\password.png" alt="" srcset="" /></span> */}
                     <span className='text-green-500'>&lt;</span>
-                    Password123
+                    Password123 test1
                     <span className='text-green-500'>OP/&gt;</span>
 
                 </div>

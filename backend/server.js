@@ -10,7 +10,7 @@ require('dotenv').config()
 const url=process.env.MONGO_URI;
 const client = new MongoClient(url);
 const dbName = 'passop';
-
+ 
 
 app.use(bodyparser.json());
 app.use(cors())
